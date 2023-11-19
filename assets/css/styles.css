@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    /* font family */
+    --font-family-body: 'Red Hat Display', sans-serif;
+    /* font size */
+    --font-size-display: 3rem;
+    --font-size-heading: 1.5rem;
+    --font-size-body: 1.125rem;
+
+    /* colors document */
+    --letter-blue: #6B59D0;
+    --background-color: #FFFFFF;
+    --body-color-title: #374151;
+    --body-color-text: #6B7280;
+    --color-line: #DEDDEB; 
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font-family-body);
+    background-color: var(--background-color);
+    height: 100vh;
+}
+
+.blue-text{
+    color: var(--letter-blue);
+}
+
+header{
+    width: 100vw;
+    z-index: 2;
+}
+
+#top__img{
+    object-fit: fill;
+    height: 150px;
+    width: 100%;
+}
+
+main{
+    width: 1130px;
+    max-width: 1280px;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+}
+
+@media only screen and (width <= 1024px) {
+    main{
+        width: 900px;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (width <= 640px) {
+    main {
+        width: 90%;
+        display: block;
+    }
+}
+
+.main__top{
+    margin-top: 125%;
+    height: 1px;
+    margin-bottom: 80px;
+}
+
+@media only screen and (width <= 1024px) {
+    .main__top{
+        margin-top: 80%;
+        margin-bottom: 80px;
+    }
+
+    .second-size{
+        margin-top: 0;
+    }
+}
+
+@media only screen and (width <= 640px) {
+    .main__top {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.main__element{
+    width: 25%;
+    border-left: 1px dashed var(--color-line);
+    padding-left: 20px;   
+}
+
+@media only screen and (width <= 1024px) {
+    .main__element {
+        width: 50%;
+    }
+}
+
+@media only screen and (width <= 640px) {
+    .main__element {
+        width: 100%;
+    }
+}
+
+.title{
+    width: 1130px;
+    padding-left: 20px;
+    z-index: 2;
+}
+
+@media only screen and (width <= 1024px) {
+    .title {
+        width: 900px;
+    }
+}
+
+@media only screen and (width <= 640px) {
+    .title {
+        width: 90%;
+    }
+}
+
+.title__element--p{
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title__element--h1{
+    font-size: var(--font-size-display);
+    width: 70%;
+    color: var(--body-color-title);
+}
+
+@media only screen and (width <= 640px) {
+    .title__element--h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
+}
+
+.card__header {
+    margin-bottom: 32px;
+}
+
+/* width of card en 1024px screen */
+@media only screen and (width <= 1024px) {
+    .card{
+        width: 50%;
+    }
+}
+
+
+/* height card to size 640px */
+@media only screen and (width <= 640px) {
+    .card {
+        width: 80%;
+        padding-top: 80px;
+    }
+    /* first element card*/
+    .third-size {
+        margin-top: 55%;
+    }    
+}
+
+/* fix position to display <= 480px */
+@media only screen and (width <= 480px) {
+    .card {
+        padding-top: 80px;
+    }
+    .third-size {
+        margin-top: 95%;
+    }
+}
+
+
+h2{
+    margin-bottom: 20px;
+    font-size: var(--font-size-body);
+    font-weight: bold;
+    color: var(--body-color-title);
+    border-left: 2px solid var(--letter-blue);
+    margin-left: -20px;
+    padding-left: 20px; 
+}
+
+article{
+    color: var(--body-color-text);
+}
+
